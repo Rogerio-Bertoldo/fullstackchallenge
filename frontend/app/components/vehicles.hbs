@@ -1,0 +1,36 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Versão</th>
+            <th>Ano</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each @vehicles as |vehicle|}}
+        <tr>
+            <td>{{vehicle.license_plate}}</td>
+            <td>{{vehicle.brand}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.version}}</td>
+            <td>{{vehicle.year}}</td>
+            <td>
+                <div>
+                    <LinkTo @route="edit-vehicle" class="btn btn-info" @query={{hash
+                        licensePlate=vehicle.license_plate}}>
+                        <i class="bi bi-pencil-square"></i>
+                    </LinkTo>
+                    <button class="btn btn-danger" type="button" {{on "click" (fn this.removeVehicle
+                        vehicle.license_plate)}}>
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

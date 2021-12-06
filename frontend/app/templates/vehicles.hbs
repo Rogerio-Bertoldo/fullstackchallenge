@@ -1,2 +1,6 @@
 {{page-title "Vehicles"}}
-<h3 style="text-align:center">Insira aqui sua Lista de Veículos</h3>
+<div class="container-fluid">
+    <h3 style="text-align:center">Lista de Veículos</h3>
+    <LinkTo @route="add-vehicle" class="mt-4 mb-4 btn btn-info">Adicionar Veículo</LinkTo>
+    <Vehicles @vehicles={{@model}} />
+</div>

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <h3 style="text-align:center">Cadastrar Veículo</h3>
+    <form class="row" onsubmit="return false;">
+        <div class="form-group col-6">
+            <label for="licensePlate">Placa</label>
+            {{input value=licensePlate class="form-control" required="true"}}
+        </div>
+        <div class="form-group col-6">
+            <label for="brand">Marca</label>
+            {{input value=brand class="form-control" required="true"}}
+        </div>
+        <div class="form-group col-6">
+            <label for="model">Modelo</label>
+            {{input value=model class="form-control" required="true"}}
+        </div>
+        <div class="form-group col-6">
+            <label for="version">Versão</label>
+            {{input value=version class="form-control" required="true"}}
+        </div>
+        <div class="form-group col-6">
+            <label for="year">Ano</label>
+            {{input value=year class="form-control" required="true"}}
+        </div>
+        <span class="col-12 text-danger">Todos os campos são obrigatórios.</span>
+        <div class="mt-5 col-12 d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary" {{action "addVehicle"}} >
+                Salvar
+            </button>
+        </div>
+    </form>
+</div>
