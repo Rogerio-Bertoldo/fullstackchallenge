@@ -42,3 +42,47 @@ Após realizar o desafio, enviar ao Github e nos enviar o link no e-mail dev.job
 
 ## Bonus
 - Criação de testes automatizados (Backend).
+
+
+## Passos para executar o projeto
+
+Primeiro é necessário subir o container do postgres. Em um terminal, vá para a pasta backend e execute o comando: `docker-compose up -d`
+
+Antes de "rodar" o projeto pela primeira vez, é necessário executar as migrations, a fim de que a estrutura do banco de dados seja criada. Ainda na pasta backend, digite o comando a seguir no terminal: `npx knex migrate:latest --env development`
+
+Após realizar de maneira bem sucedida os passos anteriores, digite em um terminal (na pasta backend): `npm start`. Com isto, o backend será executado e estará "escutando" requisições. Os endpoints criados são:
+
+- POST /vehicle
+    - Descrição: Cria um novo veículo
+    - Corpo requisição:
+    `{
+        "licensePlate": "RCN-767",
+        "brand": "Waymo",
+        "model": "Z1",
+        "version": "3.1",
+        "year": "2022"
+    }`
+
+- PUT /vehicle/:licensePlate
+    - Descrição: Atualiza as informações do veículo associado à placa fornecida como parâmetro (pode-se atualizar inclusive a placa do veículo)
+    - Corpo requisição:
+    `{
+        "licensePlate": "RCN-767",
+        "brand": "Waymo",
+        "model": "Z1",
+        "version": "3.1",
+        "year": "2022"
+    }`
+
+- GET /vehicle/:licensePlate
+    - Descrição: Obtém as informações do veículo associado à placa fornecida como parâmetro
+    - Corpo requisição: Não há
+
+- GET /vehicles
+    - Descrição: Obtém as informações de todos os veículos já cadastrados
+    - Corpo requisição: Não há
+
+- GET /health
+    - Descrição: Verifica estado da aplicação
+    - Corpo requisição: Não há
+
