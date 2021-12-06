@@ -48,7 +48,7 @@ Após realizar o desafio, enviar ao Github e nos enviar o link no e-mail dev.job
 
 Primeiro é necessário subir o container do postgres. Em um terminal, vá para a pasta backend e execute o comando: `docker-compose up -d`
 
-Antes de "rodar" o projeto pela primeira vez, é necessário executar as migrations, a fim de que a estrutura do banco de dados seja criada. Ainda na pasta backend, digite o comando a seguir no terminal: `npx knex migrate:latest --env development`
+Antes de "rodar" o projeto pela primeira vez, é necessário executar as migrations, a fim de que a estrutura do banco de dados seja criada. Na pasta backend/config/db, digite o comando a seguir no terminal: `npx knex migrate:latest --env development`
 
 Após realizar de maneira bem sucedida os passos anteriores, digite em um terminal (na pasta backend): `npm start`. Com isto, o backend será executado e estará "escutando" requisições. Os endpoints criados são:
 
