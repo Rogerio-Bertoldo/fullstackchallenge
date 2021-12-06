@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/SofitSoftware/fullstackchallenge#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "knex": "^0.95.14",
+    "pg": "^8.7.1"
   }
 }
