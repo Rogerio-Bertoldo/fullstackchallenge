@@ -86,3 +86,6 @@ Após realizar de maneira bem sucedida os passos anteriores, digite em um termin
     - Descrição: Verifica estado da aplicação
     - Corpo requisição: Não há
 
+
+Para executar o frontend, na pasta frontend digite o seguinte comando no terminal: `ember server`. Após isso, abra a url a seguir em um navegador: `http://localhost:4200/vehicles`
+
