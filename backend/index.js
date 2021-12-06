@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const status = require('http-status')
 const { errorMessages, httpStatus } = require('./api/domain/error_mapping')
 const db = require('./config/db/db')
@@ -18,6 +19,7 @@ const handleCommand = async (req, res, command, shouldSendResponseMsg = false) =
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cors())
 
 app.get('/health', async (req, res) => {
   res.send('Server Ok!')
